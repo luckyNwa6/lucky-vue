@@ -8,7 +8,7 @@ export default defineConfig({
 
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
-
+    logo: "https://luckynwa.top/mypic/luckyUi/logo.png",
     nav: [
       { text: "首页", link: "/" },
       { text: "文档", link: "/markdown-examples" },
@@ -25,5 +25,10 @@ export default defineConfig({
     ],
 
     socialLinks: [{ icon: "github", link: "https://github.com/luckyNwa6" }],
+    footer: {
+      message: "By Lucky 小维",
+      copyright:
+        "Copyright © 2024-present💘<a href='https://luckynwa.top/about' style='color: #3eaf7c;text-decoration:none'>小维博客</a>",
+    },
   },
 });
