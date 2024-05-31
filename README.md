@@ -2,9 +2,7 @@
 
 ## 🐑 分支
 
-main------------>基于 Vue3+TypeScript+Pinia+Vite+vue-router+Element Plus 框架，从零搭建
-
-luckyDev-------->上面的分支
+main------------>基于 VitePress 框架 进行配置化开发
 
 ## 🐶 开发环境
 
@@ -36,25 +34,9 @@ fix: 修复 bug
 
 中间有:后面有空格
 
-## ⭐️ 开发工具
+## 🚀 部署
 
-推荐 VS Code 开发，配合插件如下：
-
-| 插件名                        | 功能                                             |
-| ----------------------------- | ------------------------------------------------ |
-| TypeScript Vue Plugin (Volar) | 用于 TypeScript 的 Vue 插件                      |
-| Vue Language Features (Volar) | Vue3.0 语法支持                                  |
-| WindiCSS IntelliSense         | 自动完成、语法突出显示、代码折叠和构建等高级功能 |
-| Iconify IntelliSense          | Iconify 预览和搜索                               |
-| i18n Ally                     | 国际化智能提示                                   |
-| Stylelint                     | Css 格式化                                       |
-| Prettier                      | 代码格式化                                       |
-| ESLint                        | 脚本代码检查                                     |
-| DotENV                        | env 文件高亮                                     |
-
-## 🚀 优势
-
-1、在 vscode 提交时候走 husky 流程，先走格式化代码和修复，以及提交必须走提交规范,代码有错误则不能提交
+直接部署到 GitHub 上
 
 ## 🚀 其他
 
@@ -63,3 +45,7 @@ fix: 修复 bug
 ```shell
 npm install -g rimraf
 ```
+
+官网: https://vitepress.dev/reference/default-theme-home-page
+
+本项目: https://luckynwa6.github.io/lucky-vue-study/
