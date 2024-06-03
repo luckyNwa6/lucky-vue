@@ -7,6 +7,23 @@ export default defineConfig({
 
   themeConfig: {
     logo: "https://luckynwa.top/mypic/luckyUi/logo.png",
+    outline: {
+      label: "导航",
+    },
+    search: {
+      provider: "local",
+    },
+    docFooter: {
+      prev: "上一页",
+      next: "下一页",
+    },
+    lastUpdated: {
+      text: "更新时间",
+      formatOptions: {
+        dateStyle: "short",
+        timeStyle: "short",
+      },
+    },
     nav: [
       { text: "首页", link: "/" },
       { text: "文档", link: "/src/start/start-explain" },
