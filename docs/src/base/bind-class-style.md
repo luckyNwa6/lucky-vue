@@ -1,12 +1,14 @@
 # Class 与 Style 绑定
 
-数据绑定的一个常见需求场景是操纵元素的 CSS class 列表和内联样式。因为 class 和 style 都是 attribute，我们可以和其他 attribute 一样使用 v-bind 将它们和动态的字符串绑定。但是，在处理比较复杂的绑定时，通过拼接生成字符串是麻烦且易出错的。因此，Vue 专门为 class 和 style 的 v-bind 用法提供了特殊的功能增强。除了字符串外，表达式的值也可以是对象或数组。
-绑定 HTML class​
+Vue 专门为 class 和 style 的 v-bind 用法提供了特殊的功能增强。除了字符串外，表达式的值也可以是对象或数组。
+
+## 绑定 HTML class​
+
 绑定对象 ​
-我们可以给 :class (v-bind:class 的缩写) 传递一个对象来动态切换 class：
+我们可以给 :class (v-bind:class 的缩写) 传递一个对象来动态切换 class
 
 ```js
-<div :class="{ active: isActive }"></div>
+<div  class="static" :class="{ active: isActive, 'text-danger': hasError }"></div>
 data() {
   return {
     isActive: true,
@@ -17,43 +19,21 @@ data() {
 
 上面的语法表示 active 是否存在取决于数据属性 isActive 的真假值。
 
-你可以在对象中写多个字段来操作多个 class。此外，:class 指令也可以和一般的 class attribute 共存。举例来说，下面这样的状态：
-
-配合以下模板：
-
-```js
-<div
-  class="static"
-  :class="{ active: isActive, 'text-danger': hasError }"
-></div>
-```
+:class 指令也可以和一般的 class attribute 共存。
 
 渲染的结果会是：
 
 ```js
 <div class="static active"></div>
-data() {
-  return {
-    classObject: {
-      active: true,
-      'text-danger': false
-    }
-  }
-}
 ```
 
 当 isActive 或者 hasError 改变时，class 列表会随之更新。举例来说，如果 hasError 变为 true，class 列表也会变成 "static active text-danger"。
 
-绑定的对象并不一定需要写成内联字面量的形式，也可以直接绑定一个对象：
+绑定的对象并不一定需要写成内联字面量的形式，也可以直接绑定返回对象的计算属性
+这是一个常见且很有用的技巧：
 
 ```js
 <div :class="classObject"></div>
-```
-
-这将渲染：
-
-```js
-<div class="active"></div>
 data() {
   return {
     isActive: true,
@@ -70,14 +50,7 @@ computed: {
 }
 ```
 
-我们也可以绑定一个返回对象的计算属性。这是一个常见且很有用的技巧：
-
-```js
-<div :class="classObject"></div>
-```
-
-绑定数组 ​
-我们可以给 :class 绑定一个数组来渲染多个 CSS class：
+:class 绑定一个数组来渲染多个 CSS class：
 
 ```js
 data() {
@@ -109,9 +82,6 @@ errorClass 会一直存在，但 activeClass 只会在 isActive 为真时才存�
 <div :class="[{ activeClass: isActive }, errorClass]"></div>
 ```
 
-在组件上使用 ​
-本节假设你已经有 Vue 组件的知识基础。如果没有，你也可以暂时跳过，以后再阅读。
-
 对于只有一个根元素的组件，当你使用了 class attribute 时，这些 class 会被添加到根元素上并与该元素上已有的 class 合并。
 
 举例来说，如果你声明了一个组件名叫 MyComponent，模板如下：
@@ -120,8 +90,6 @@ errorClass 会一直存在，但 activeClass 只会在 isActive 为真时才存�
 <!-- 子组件模板 -->
 <p class="foo bar">Hi!</p>
 ```
-
-在使用时添加一些 class：
 
 ```js
 <!-- 在使用组件时 -->
@@ -154,17 +122,16 @@ Class 的绑定也是同样的：
 <span>This is a child component</span>
 ```
 
+这将被渲染为：
+
 ```js
 <MyComponent class="baz" />
 <p class="baz">Hi!</p>
 <span>This is a child component</span>
 ```
 
-这将被渲染为：
+## 绑定内联样式 ​
 
-你可以在透传 Attribute 一章中了解更多组件的 attribute 继承的细节。
-
-绑定内联样式 ​
 绑定对象 ​
 :style 支持绑定 JavaScript 对象值，对应的是 HTML 元素的 style 属性：
 
@@ -182,9 +149,13 @@ data() {
 
 ```js
 <div :style="{ 'font-size': fontSize + 'px' }"></div>
+
+```
+
 直接绑定一个样式对象通常是一个好主意，这样可以使模板更加简洁：
 
-js
+```js
+<div :style="styleObject"></div>
 data() {
   return {
     styleObject: {
@@ -193,10 +164,6 @@ data() {
     }
   }
 }
-```
-
-```js
-<div :style="styleObject"></div>
 ```
 
 同样的，如果样式对象需要更复杂的逻辑，也可以使用返回样式对象的计算属性。
