@@ -17,7 +17,7 @@ export default defineConfig({
         text: "开始",
         items: [
           { text: "简介", link: "/src/start/start-explain" },
-          { text: "开始上手", link: "/src/start/start-go" },
+          { text: "快速上手", link: "/src/start/start-go" },
         ],
       },
       {
@@ -25,6 +25,16 @@ export default defineConfig({
         items: [
           { text: "模板语法", link: "/src/base/template-syntax" },
           { text: "响应式", link: "/src/base/responsive" },
+          { text: "计算属性", link: "/src/base/calculate-attributes" },
+          { text: "类与样式绑定", link: "/src/base/bind-class-style" },
+          { text: "条件渲染", link: "/src/base/if-rendering" },
+          { text: "列表渲染", link: "/src/base/list-rendering" },
+          { text: "事件处理", link: "/src/base/event-listeners" },
+          { text: "表单输入绑定", link: "/src/base/bind-form" },
+          { text: "生命周期", link: "/src/base/life-cycle" },
+          { text: "侦听器", link: "/src/base/listener" },
+          { text: "模板引用", link: "/src/base/ref-template" },
+          { text: "组件基础", link: "/src/base/component-base" },
         ],
       },
       {

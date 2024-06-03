@@ -8,9 +8,9 @@ hero:
   actions:
     - theme: brand
       text: 快速上手
-      link: /src/base/template-syntax
+      link: /src/start/start-go
     - theme: alt
-      text: 安装
+      text: 简介
       link: /src/start/start-explain
 
 features:
