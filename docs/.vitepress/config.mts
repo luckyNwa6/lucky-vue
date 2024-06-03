@@ -37,13 +37,6 @@ export default defineConfig({
           { text: "组件基础", link: "/src/base/component-base" },
         ],
       },
-      {
-        text: "测试",
-        items: [
-          { text: "测试1", link: "/api-examples" },
-          { text: "测试2", link: "/markdown-examples" },
-        ],
-      },
     ],
 
     socialLinks: [{ icon: "github", link: "https://github.com/luckyNwa6" }],
