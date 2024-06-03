@@ -8,16 +8,30 @@ hero:
   actions:
     - theme: brand
       text: 快速上手
-      link: /markdown-examples
+      link: /src/base/template-syntax
     - theme: alt
       text: 安装
-      link: /api-examples
+      link: /src/start/start-explain
 
 features:
-  - title: 易学易用
-    details: 基于标准 HTML、CSS 和 JavaScript 构建，提供容易上手的 API 和一流的文档。
-  - title: 性能出色
-    details: 经过编译器优化、完全响应式的渲染系统，几乎不需要手动优化。
-  - title: 灵活多变
-    details: 丰富的、可渐进式集成的生态系统，可以根据应用规模在库和框架间切换自如。
+  - title: UnoCSS
+    details: Unocss是一种基于PurgeCSS的CSS框架,它可以帮助你更简洁、更高效地编写CSS。 Unocss的语法非常简单,它采用了类似于Tailwind CSS的类名方式。
+    link: https://unocss.dev/
+    linkText: 了解更多
+  - title: Vue3
+    details: 渐进式JavaScript框架.
+    link: https://cn.vuejs.org/
+    linkText: 了解更多
+  - title: vitePress
+    details: Vite & Vue Powered Static Site Generator.
+    link: https://vitepress.dev/
+  - title: Pinia
+    details: 符合直觉的Vue.js 状态管理库.
+    link: https://pinia.vuejs.org/zh/
+  - title: Vuex
+    details: 是一个专为 Vue.js 应用程序开发的状态管理模式.
+    link: https://vuex.vuejs.org/zh/
+  - title: Vue Router
+    details: Vue.js 的官方路由,为 Vue.js 提供富有表现力、可配置的、方便的路由.
+    link: https://router.vuejs.org/zh/
 ---

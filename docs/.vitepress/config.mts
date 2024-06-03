@@ -1,25 +1,37 @@
 import { defineConfig } from "vitepress";
 
-// https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "Vue.js",
+  title: "Lucky_Vue.js",
   description: "渐进式JavaScript 框架",
   base: "/lucky-vue-study/",
 
   themeConfig: {
-    // https://vitepress.dev/reference/default-theme-config
     logo: "https://luckynwa.top/mypic/luckyUi/logo.png",
     nav: [
       { text: "首页", link: "/" },
-      { text: "文档", link: "/markdown-examples" },
+      { text: "文档", link: "/src/start/start-explain" },
     ],
 
     sidebar: [
       {
         text: "开始",
         items: [
-          { text: "简介", link: "/markdown-examples" },
-          { text: "开始上手", link: "/api-examples" },
+          { text: "简介", link: "/src/start/start-explain" },
+          { text: "开始上手", link: "/src/start/start-go" },
+        ],
+      },
+      {
+        text: "基础",
+        items: [
+          { text: "模板语法", link: "/src/base/template-syntax" },
+          { text: "响应式", link: "/src/base/responsive" },
+        ],
+      },
+      {
+        text: "测试",
+        items: [
+          { text: "测试1", link: "/api-examples" },
+          { text: "测试2", link: "/markdown-examples" },
         ],
       },
     ],
