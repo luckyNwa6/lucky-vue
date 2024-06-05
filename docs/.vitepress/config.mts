@@ -17,15 +17,19 @@ export default defineConfig({
       prev: "上一页",
       next: "下一页",
     },
-    lastUpdated: {
-      text: "更新时间",
-      formatOptions: {
-        dateStyle: "short",
-        timeStyle: "short",
-      },
-    },
+    // lastUpdated: {
+    //   text: "更新时间",
+    //   formatOptions: {
+    //     dateStyle: "short",
+    //     timeStyle: "short",
+    //   },
+    // },
     nav: [
       { text: "首页", link: "/" },
+      {
+        text: "演练场",
+        link: "https://play.vuejs.org",
+      },
       { text: "文档", link: "/src/start/start-explain" },
     ],
 
@@ -77,8 +81,7 @@ export default defineConfig({
     socialLinks: [{ icon: "github", link: "https://github.com/luckyNwa6" }],
     footer: {
       message: "By Lucky 小维",
-      copyright:
-        "Copyright © 2024-present💘<a href='https://luckynwa.top/about' style='color: #3eaf7c;text-decoration:none'>小维的博客</a>",
+      copyright: `Copyright © 2023-${new Date().getFullYear()}💘<a href='https://luckynwa.top/about' style='color: #3eaf7c;text-decoration:none'>小维的博客</a>`,
     },
   },
 });
