@@ -31,13 +31,9 @@ jobs:
       - name: 使用VitePress构建
         run: yarn docs:build
 
-      # 列出构建输出目录内容
-      - name: 列出构建输出目录内容
-        run: ls -la ./docs/.vitepress/dist
-
       # 列出构建输出目录内容（包含子目录和文件）
       - name: 列出构建输出目录内容（详细）
-        run: find ./docs/.vitepress/dist -type f
+        run: find ./docs/dist -type f
 
       # 清空目标服务器上的目录内容
       - name: 清空目标服务器该文件夹下内容
@@ -58,17 +54,6 @@ jobs:
           username: ${{ secrets.SSH_USERNAME }}
           password: ${{ secrets.SSH_PASSWORD }}
           port: ${{ secrets.SSH_PORT }}
-          source: ./docs/* ./docs/.vitepress/* # 修改此行以包含 .vitepress 目录下的文件
+          source: ./docs/dist/*
           target: /nwa/nginx91/html/myvue/
           strip_components: 1
-
-      # 列出服务器目录内容
-      - name: 列出服务器目录内容
-        uses: appleboy/ssh-action@master
-        with:
-          host: ${{ secrets.SSH_HOST }}
-          username: ${{ secrets.SSH_USERNAME }}
-          password: ${{ secrets.SSH_PASSWORD }}
-          port: ${{ secrets.SSH_PORT }}
-          script: |
-            ls -la /nwa/nginx91/html/myvue
