@@ -46,7 +46,9 @@ fix: 修复 bug
 npm install -g rimraf
 ```
 
-本项目: https://luckynwa6.github.io/lucky-vue-study/
+主地址: https://myvue.luckynwa.top/lucky-vue-study/
+
+备用: https://luckynwa6.github.io/lucky-vue-study/
 
 本项目仓库:https://github.com/luckyNwa6/lucky-vue-study
 
