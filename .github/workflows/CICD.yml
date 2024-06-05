@@ -23,10 +23,10 @@ jobs:
       - name: 安装依赖
         run: yarn install # 或者 pnpm install / yarn install / bun install
       - name: 使用VitePress构建
-        run: yarn  docs:build # 或者 pnpm docs:build / yarn docs:build / bun run docs:build
+        run: yarn docs:build # 或者 pnpm docs:build / yarn docs:build / bun run docs:build
 
       # 清空目标服务器上的目录内容
-      - name: Clear Target Directory
+      - name: 清空目标服务器该文件夹下内容
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.SSH_HOST }}
@@ -36,7 +36,7 @@ jobs:
           script: |
             rm -rf /nwa/nginx91/html/myvue/*
       # 部署到服务器
-      - name: Upload to Deploy Server
+      - name: 上传打包后的资源到服务器
         uses: appleboy/scp-action@master
         with:
           # 服务器域名
@@ -48,7 +48,7 @@ jobs:
           # 服务器端口
           port: ${{ secrets.SSH_PORT }}
           # 指定上传的文件目录(项目配置的打包目录名称)
-          source: "docs/.vitepress/dist/*"
+          source: "./docs/.vitepress/dist/*"
           # 指定上传服务器目录
           target: "/nwa/nginx91/html/myvue"
           # 解压时覆盖现有文件
