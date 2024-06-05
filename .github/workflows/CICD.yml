@@ -50,10 +50,6 @@ jobs:
           script: |
             rm -rf /nwa/nginx91/html/myvue/*
 
-      # 确保上一步完成
-      - name: 等待清空操作完成
-        run: sleep 10s
-
       # 部署到服务器
       - name: 上传打包后的资源到服务器
         uses: appleboy/scp-action@master
@@ -62,7 +58,7 @@ jobs:
           username: ${{ secrets.SSH_USERNAME }}
           password: ${{ secrets.SSH_PASSWORD }}
           port: ${{ secrets.SSH_PORT }}
-          source: ./docs/*
+          source: ./docs/* ./docs/.vitepress/* # 修改此行以包含 .vitepress 目录下的文件
           target: /nwa/nginx91/html/myvue/
           strip_components: 1
 
