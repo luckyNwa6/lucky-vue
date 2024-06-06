@@ -1,4 +1,4 @@
-name: 打包文件并推送到云服务器
+name: 云服务器CICD
 # 监听 main 分支上的 push 事件
 on:
   push:
@@ -30,10 +30,6 @@ jobs:
 
       - name: 使用VitePress构建
         run: yarn docs:build
-
-      # 列出构建输出目录内容（包含子目录和文件）
-      - name: 列出构建输出目录内容（详细）
-        run: find ./docs/dist -type f
 
       # 清空目标服务器上的目录内容
       - name: 清空目标服务器该文件夹下内容
