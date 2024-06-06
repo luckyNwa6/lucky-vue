@@ -4,7 +4,7 @@ export default defineConfig({
   title: "Lucky_Vue.js",
   description: "渐进式JavaScript 框架",
   base: "/lucky-vue-study/",
-  outDir: "./dist", // 设置输出目录
+  outDir: "../dist", // 设置输出目录
   themeConfig: {
     logo: "https://luckynwa.top/mypic/luckyUi/logo.png",
     outline: {
