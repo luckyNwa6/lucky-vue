@@ -56,10 +56,10 @@ export default defineConfig({
         ],
       },
       {
-        text: "深入组件",
+        text: "常用",
         items: [
           { text: "注册", link: "/src/deep-component/register" },
-          { text: "Props", link: "/src/deep-component/demo" },
+          { text: "传值", link: "/src/deep-component/value-transmission" },
           { text: "事件", link: "/src/deep-component/demo" },
           { text: "组件", link: "/src/deep-component/demo" },
           { text: "插槽", link: "/src/deep-component/demo" },
