@@ -3,7 +3,7 @@ import { defineConfig } from "vitepress";
 export default defineConfig({
   title: "Lucky_Vue.js",
   description: "渐进式JavaScript 框架",
-  base: "/lucky-vue-study/",
+  base: "/lucky-vue/",
   outDir: "../dist", // 设置输出目录
   themeConfig: {
     logo: "https://luckynwa.top/mypic/luckyUi/logo.png",
