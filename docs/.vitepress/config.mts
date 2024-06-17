@@ -26,11 +26,15 @@ export default defineConfig({
     // },
     nav: [
       { text: "首页", link: "/" },
+      { text: "文档", link: "/src/start/start-explain" },
+      {
+        text: "博客",
+        link: "https://luckynwa.top/about",
+      },
       {
         text: "演练场",
         link: "https://play.vuejs.org",
       },
-      { text: "文档", link: "/src/start/start-explain" },
     ],
 
     sidebar: [
