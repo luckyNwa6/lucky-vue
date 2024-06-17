@@ -4,9 +4,9 @@
 
 ## 选项式
 
-父---->子 用 props
+父--->子 用 props
 
-子---->父 用 自定义事件
+子--->父 用 自定义事件
 
 Father.vue
 
@@ -92,7 +92,7 @@ export default {
 
 ```
 
-## 组合式1
+## 组合式 1
 
 Father.vue
 
@@ -183,7 +183,7 @@ export default {
 
 ```
 
-## 组合式2(推荐)
+## 组合式 2(推荐)
 
 Father.vue
 

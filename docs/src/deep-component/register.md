@@ -1,17 +1,35 @@
 # 组件注册
 
-一个 Vue 组件在使用前需要先被“注册”，这样 Vue 才能在渲染模板时找到其对应的实现。组件注册有两种方式：全局注册和局部注册
+一个 Vue 组件在使用前需要先被“注册”，这样 Vue 才能在渲染模板时找到其对应的实现
 
+组件注册有两种方式：全局注册和局部注册
 
+方法有时候也需要全局注册或者局部注册引入
 
 ## 全局注册
 
-我们可以使用 [Vue 应用实例](https://cn.vuejs.org/guide/essentials/application.html)的 `.component()` 方法，让组件在当前 Vue 应用中全局可用。
+全局注册一般都是在main.js中进行
+
+vue2
+
+```js
+import Vue from 'vue'
+import { getDicts } from "@/api/system/dict/data";
+import DictTag from '@/components/DictTag'
+// 全局方法挂载
+Vue.prototype.getDicts = getDicts
+// 全局组件挂载
+Vue.component('DictTag', DictTag)
+
+```
+
+Vue3
 
 ```js
 import { createApp } from 'vue'
+import App from '@/App.vue'
 
-const app = createApp({})
+const app = createApp(App)
 
 app.component(
   // 注册的名字
@@ -21,17 +39,14 @@ app.component(
     /* ... */
   }
 )
-```
-
-如果使用单文件组件，你可以注册被导入的 `.vue` 文件
-
-```js
-import MyComponent from './App.vue'
 
 app.component('MyComponent', MyComponent)
+//工具类挂载
+app.config.globalProperties.DICT_TYPE = DICT_TYPE
+
 ```
 
-`.component()` 方法可以被链式调用：
+`app.component()` 方法也可以被链式调用：
 
 ```js
 app
