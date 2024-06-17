@@ -5,8 +5,17 @@ export default defineConfig({
   description: "渐进式JavaScript 框架",
   base: "/lucky-vue/",
   outDir: "../dist", // 设置输出目录
+  head: [
+    [
+      "link",
+      {
+        rel: "icon",
+        href: "https://luckynwa.top/mypic/mdS/logoVitePress.png",
+      },
+    ],
+  ],
   themeConfig: {
-    logo: "https://luckynwa.top/mypic/luckyUi/logo.png",
+    logo: "https://luckynwa.top/mypic/mdS/logoVitePress.png",
     outline: {
       label: "导航",
     },
