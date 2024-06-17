@@ -1,4 +1,4 @@
-# 传值
+# 前言
 
 组件在被封装好之后，彼此之间是相互独立的，不存在父子关系 在使用组件的时候，根据彼此的嵌套关系，形成了父子关系、兄弟关系
 
@@ -267,4 +267,21 @@ const addSum = () => {
 
 子----->子 兄弟组件用 EventBus vue2.x
 
-![](https://luckynwa.top/mypic/mdS/eventBus.png)
+```js
+新建一个文件夹叫eventBus.js
+import Vue from 'vue'
+let bus = new Vue()
+Vue.prototype.$eventBus = bus
+export default bus
+
+兄弟A 和B都引入这个js
+都要import bus from './eventBus.js'
+  接收方mounted
+    bus.$on('share', (val) => {
+      console.log(val);
+    })
+
+    发送方 放一个方法里
+    bus.$emit('share', this.msg)
+
+```

@@ -1,4 +1,4 @@
-# 组件基础
+# 前言
 
 组件允许我们将 UI 划分为独立的、可重用的部分，并且可以对每个部分进行单独的思考
 
@@ -23,7 +23,7 @@ const count = ref(0)
 
 要使用一个子组件，我们需要在父组件中导入它，这个组件将会以默认导出的形式被暴露给外部
 
-setup不需要注册组件
+setup 不需要注册组件
 
 ```js
 <template>
@@ -76,19 +76,19 @@ defineProps(['title'])
 `defineProps` 是一个仅 `<script setup>` 中可用的编译宏命令，并不需要显式地导入。声明的 props 会自动暴露给模板。`defineProps` 会返回一个对象，其中包含了可以传递给组件的所有 props：
 
 ```js
-const props = defineProps(['title'])
-console.log(props.title)
+const props = defineProps(["title"]);
+console.log(props.title);
 ```
 
 如果你没有使用 `<script setup>`，props 必须以 `props` 选项的方式声明，props 对象会作为 `setup()` 函数的第一个参数被传入：
 
 ```js
 export default {
-  props: ['title'],
+  props: ["title"],
   setup(props) {
-    console.log(props.title)
-  }
-}
+    console.log(props.title);
+  },
+};
 ```
 
 一个组件可以有任意多的 props，默认情况下，所有 prop 都接受任意类型的值。
@@ -97,7 +97,7 @@ export default {
 <script setup>
 import { ref } from 'vue'
 import BlogPost from './BlogPost.vue'
-  
+
 const posts = ref([
   { id: 1, title: 'My journey with Vue' },
   { id: 2, title: 'Blogging with Vue' },
@@ -176,9 +176,7 @@ const postFontSize = ref(1)
 
 ```js
 <script setup>
-const emit = defineEmits(['enlarge-text'])
-
-emit('enlarge-text')
+  const emit = defineEmits(['enlarge-text']) emit('enlarge-text')
 </script>
 ```
 
@@ -186,11 +184,11 @@ emit('enlarge-text')
 
 ```js
 export default {
-  emits: ['enlarge-text'],
+  emits: ["enlarge-text"],
   setup(props, ctx) {
-    ctx.emit('enlarge-text')
-  }
-}
+    ctx.emit("enlarge-text");
+  },
+};
 ```
 
 ## 通过插槽来分配内容
@@ -198,9 +196,7 @@ export default {
 我们希望能和 HTML 元素一样向组件中传递内容
 
 ```js
-<AlertBox>
-  Something bad happened.
-</AlertBox>
+<AlertBox>Something bad happened.</AlertBox>
 ```
 
 这可以通过 Vue 的自定义 `<slot>` 元素来实现
@@ -233,4 +229,4 @@ export default {
 
 你也可以使用 `is` attribute 来创建一般的 HTML 元素。
 
-当使用 `<component :is="...">` 来在多个组件间作切换时，被切换掉的组件会被卸载。我们可以通过KeepAlive标签强制被切换掉的组件仍然保持“存活”的状态。
+当使用 `<component :is="...">` 来在多个组件间作切换时，被切换掉的组件会被卸载。我们可以通过 KeepAlive 标签强制被切换掉的组件仍然保持“存活”的状态。

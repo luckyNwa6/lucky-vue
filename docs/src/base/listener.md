@@ -1,13 +1,14 @@
-# 侦听器
+# 前言
 
 计算属性允许我们声明性地计算衍生值。然而在有些情况下，我们需要在状态变化时执行一些“副作用”
 
-例如：更改 DOM或是根据异步操作的结果去修改另一处的状态
+例如：更改 DOM 或是根据异步操作的结果去修改另一处的状态
 
 ## 基本示例 ​
+
 watch 选项在每次响应式属性发生变化时触发一个函数
 
-选项式 
+选项式
 
 ```js
 <template>
@@ -45,7 +46,7 @@ export default {
       handler(n, o) {
         console.log('新值是:', n)
         console.log('旧值是:', o)
-      }, 
+      },
      // deep: true//加了这个才能监听深处对象，不然监测不到点击事件导致的值变化
     }
   },
@@ -136,8 +137,6 @@ watch(question, (newQuestion, oldQuestion) => {
 </script>
 ```
 
-
-
 ## 深层侦听器
 
 watch 默认是浅层的：被侦听的属性，仅在被赋新值时，才会触发回调函数——而嵌套属性的变化不会触发
@@ -155,10 +154,10 @@ export default {
         // 只要没有替换对象本身，
         // 那么这里的 `newValue` 和 `oldValue` 相同
       },
-      deep: true
-    }
-  }
-}
+      deep: true,
+    },
+  },
+};
 ```
 
 组合式
@@ -166,26 +165,26 @@ export default {
 直接给 `watch()` 传入一个响应式对象，会隐式地创建一个深层侦听器——该回调函数在所有嵌套的变更时都会被触发：
 
 ```js
-const obj = reactive({ count: 0 })
+const obj = reactive({ count: 0 });
 
 watch(obj, (newValue, oldValue) => {
   // 在嵌套的属性变更时触发
   // 注意：`newValue` 此处和 `oldValue` 是相等的
   // 因为它们是同一个对象！
-})
+});
 
-obj.count++
+obj.count++;
 ```
 
 相比之下，一个返回响应式对象的 getter 函数，只有在返回不同的对象时，才会触发回调：
 
 ```js
 watch(
-  () => state.someObject,//对象中对象
+  () => state.someObject, //对象中对象
   () => {
     // 仅当 state.someObject 被替换时触发
   }
-)
+);
 ```
 
 你也可以给上面这个例子显式地加上 `deep` 选项，强制转成深层侦听器：
@@ -198,7 +197,7 @@ watch(
     // *除非* state.someObject 被整个替换了
   },
   { deep: true }
-)
+);
 ```
 
 ::: danger
@@ -207,9 +206,8 @@ watch(
 
 :::
 
-
-
 ## 即时回调的侦听器 ​
+
 watch 默认是懒执行的：仅当数据源变化时，才会执行回调。但在某些场景中，我们希望在创建侦听器时，立即执行一遍回调。举例来说，我们想请求一些初始数据，然后在相关状态更改时重新请求数据。
 
 我们可以用一个对象来声明侦听器，这个对象有 handler 方法和 immediate: true 选项，这样便能强制回调函数立即执行
@@ -222,11 +220,11 @@ export default {
     question: {
       handler(newQuestion, oldQuestion) {
         // 在组件实例创建时会立即调用
-        console.log('新值是:', newQuestion)
-        console.log('旧值是:', oldQuestion)
-        if (newQuestion.includes('?')) {
-          this.getAnswer()
-        } 
+        console.log("新值是:", newQuestion);
+        console.log("旧值是:", oldQuestion);
+        if (newQuestion.includes("?")) {
+          this.getAnswer();
+        }
       },
       // 强制立即执行回调
       immediate: true,
@@ -281,7 +279,7 @@ watchEffect(async () => {
 
 回调函数的初次执行就发生在 created 钩子之前。Vue 此时已经处理了 data、computed 和 methods 选项，所以这些属性在第一次调用时就是可用的。
 
-## watch和watchEffect
+## watch 和 watchEffect
 
 `watch` 和 `watchEffect` 都能响应式地执行有副作用的回调。它们之间的主要区别是追踪响应式依赖的方式：
 
@@ -289,9 +287,8 @@ watchEffect(async () => {
 
 - `watchEffect`，则会在副作用发生期间追踪依赖。它会在同步执行过程中，自动追踪所有能访问到的响应式属性。这更方便，而且代码往往更简洁，但有时其响应性依赖关系会不那么明确。
 
-  
-
 ## 回调的触发时机 ​
+
 当你更改了响应式状态，它可能会同时触发 Vue 组件更新和侦听器回调。
 
 类似于组件更新，用户创建的侦听器回调函数也会被批量处理以避免重复调用。
@@ -303,6 +300,7 @@ watchEffect(async () => {
 这意味着如果你尝试在侦听器回调中访问所属组件的 DOM，那么 DOM 将处于更新前的状态。
 
 ## this.$watch()​
+
 我们也可以使用组件实例的 $watch() 方法来命令式地创建一个侦听器：
 
 ```js
@@ -318,6 +316,7 @@ export default {
 如果要在特定条件下设置一个侦听器，或者只侦听响应用户交互的内容，这方法很有用。它还允许你提前停止该侦听器。
 
 ## 停止侦听器 ​
+
 用 watch 选项或者 $watch() 实例方法声明的侦听器，会在宿主组件卸载时自动停止。因此，在大多数场景下，你无需关心怎么停止它。
 
 在少数情况下，你的确需要在组件卸载之前就停止一个侦听器，这时可以调用 $watch() API 返回的函数
@@ -339,35 +338,28 @@ unwatch();
 
 ```js
 <script setup>
-import { watchEffect } from 'vue'
-
-// 它会自动停止
-watchEffect(() => {})
-
-// ...这个则不会！
-setTimeout(() => {
-  watchEffect(() => {})
-}, 100)
+  import {watchEffect} from 'vue' // 它会自动停止 watchEffect(() => {}) //
+  ...这个则不会！ setTimeout(() => {watchEffect(() => {})}, 100)
 </script>
 ```
 
 要手动停止一个侦听器，请调用 `watch` 或 `watchEffect` 返回的函数：
 
 ```js
-const unwatch = watchEffect(() => {})
+const unwatch = watchEffect(() => {});
 // ...当该侦听器不再需要时
-unwatch()
+unwatch();
 ```
 
 注意，需要异步创建侦听器的情况很少，请尽可能选择同步创建。如果需要等待一些异步数据，你可以使用条件式的侦听逻辑：
 
 ```js
 // 需要异步请求得到的数据
-const data = ref(null)
+const data = ref(null);
 
 watchEffect(() => {
   if (data.value) {
     // 数据加载后执行某些操作...
   }
-})
+});
 ```

@@ -1,4 +1,4 @@
-# Class 与 Style 绑定
+# 前言
 
 Vue 专门为 class 和 style 的 v-bind 用法提供了特殊的功能增强。除了字符串外，表达式的值也可以是对象或数组。
 

@@ -1,4 +1,4 @@
-# 组件注册
+# 前言
 
 一个 Vue 组件在使用前需要先被“注册”，这样 Vue 才能在渲染模板时找到其对应的实现
 
@@ -8,51 +8,49 @@
 
 ## 全局注册
 
-全局注册一般都是在main.js中进行
+全局注册一般都是在 main.js 中进行
 
 vue2
 
 ```js
-import Vue from 'vue'
+import Vue from "vue";
 import { getDicts } from "@/api/system/dict/data";
-import DictTag from '@/components/DictTag'
+import DictTag from "@/components/DictTag";
 // 全局方法挂载
-Vue.prototype.getDicts = getDicts
+Vue.prototype.getDicts = getDicts;
 // 全局组件挂载
-Vue.component('DictTag', DictTag)
-
+Vue.component("DictTag", DictTag);
 ```
 
 Vue3
 
 ```js
-import { createApp } from 'vue'
-import App from '@/App.vue'
+import { createApp } from "vue";
+import App from "@/App.vue";
 
-const app = createApp(App)
+const app = createApp(App);
 
 app.component(
   // 注册的名字
-  'MyComponent',
+  "MyComponent",
   // 组件的实现
   {
     /* ... */
   }
-)
+);
 
-app.component('MyComponent', MyComponent)
+app.component("MyComponent", MyComponent);
 //工具类挂载
-app.config.globalProperties.DICT_TYPE = DICT_TYPE
-
+app.config.globalProperties.DICT_TYPE = DICT_TYPE;
 ```
 
 `app.component()` 方法也可以被链式调用：
 
 ```js
 app
-  .component('ComponentA', ComponentA)
-  .component('ComponentB', ComponentB)
-  .component('ComponentC', ComponentC)
+  .component("ComponentA", ComponentA)
+  .component("ComponentB", ComponentB)
+  .component("ComponentC", ComponentC);
 ```
 
 全局注册的组件可以在此应用的任意组件的模板中使用
@@ -70,13 +68,13 @@ app
 
 ```vue
 <script>
-import ComponentA from './ComponentA.vue'
+import ComponentA from "./ComponentA.vue";
 
 export default {
   components: {
-    ComponentA//等价于ComponentA: ComponentA
-  }
-}
+    ComponentA, //等价于ComponentA: ComponentA
+  },
+};
 </script>
 
 <template>

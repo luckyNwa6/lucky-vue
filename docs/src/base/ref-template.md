@@ -1,4 +1,4 @@
-# 模板引用
+# 前言
 
 直接访问底层 DOM 元素，可以使用特殊的 ref attribute：
 
@@ -11,6 +11,7 @@
 或在一个元素上初始化一个第三方库。
 
 ## 访问模板引用 ​
+
 挂载结束后引用都会被暴露在 `this.$refs` 之上
 
 选项式
@@ -31,7 +32,7 @@ export default {
 
 注意，你只可以在组件挂载后才能访问模板引用。如果你想在模板中的表达式上访问 $refs.input，在初次渲染时会是 undefined。这是因为在初次渲染前这个元素还不存在呢！
 
-组合式1
+组合式 1
 
 ```js
 <template>
@@ -45,12 +46,12 @@ import { ref, onMounted } from 'vue'
 const input = ref(null)
 onMounted(() => {
   input.value.focus()
-  
+
 })
 </script>
 ```
 
-组合式2  侦听一个模板引用 ref 的变化，确保考虑到其值为 `null` 的情况
+组合式 2 侦听一个模板引用 ref 的变化，确保考虑到其值为 `null` 的情况
 
 ```js
 <template>
@@ -77,6 +78,7 @@ export default {
 ```
 
 ## 组件上的 ref​
+
 这一小节假设你已了解组件的相关知识，或者你也可以先跳过这里，之后再回来看。
 
 模板引用也可以被用在一个子组件上。这种情况下引用中获得的值是组件实例
@@ -93,7 +95,7 @@ export default {
 
 <script>
 import Child from './Child.vue'
-  
+
 export default {
   components: {
     Child
@@ -169,16 +171,8 @@ Child.vue
 
 ```js
 <script setup>
-import { ref } from 'vue'
-
-const a = 1
-const b = ref(2)
-
-// 像 defineExpose 这样的编译器宏不需要导入
-defineExpose({
-  a,
-  b
-})
+  import {ref} from 'vue' const a = 1 const b = ref(2) // 像 defineExpose
+  这样的编译器宏不需要导入 defineExpose({(a, b)})
 </script>
 ```
 
