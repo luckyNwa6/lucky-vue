@@ -72,7 +72,7 @@ export default defineConfig({
         items: [
           { text: "指令", link: "/src/rare/instructions" },
           { text: "数组处理", link: "/src/rare/arrHandle" },
-          { text: "特殊元素", link: "/src/rare/demo" },
+          { text: "对象处理", link: "/src/rare/objHandle" },
           { text: "特殊Attributes", link: "/src/rare/demo" },
         ],
       },
