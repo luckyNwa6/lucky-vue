@@ -4,14 +4,16 @@ layout: home
 hero:
   name: 渐进式
   text: "JavaScript 框架"
-  tagline: 易学易用，适用场景丰富的🤠小维💘前端知识库。
+  tagline: 易学易用，适用场景丰富的🤠小维💘前端知识库
+  image:
+    src: "https://luckynwa.top/mypic/mdS/logoVitePress.png"
   actions:
     - theme: brand
       text: 快速上手
-      link: /src/start/start-go
+      link: /src/vueList/start/start-go
     - theme: alt
       text: 简介
-      link: /src/start/start-explain
+      link: /src/vueList/start/start-explain
 
 features:
   - title: Lucky_Blog
