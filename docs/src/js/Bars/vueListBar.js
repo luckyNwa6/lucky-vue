@@ -19,6 +19,7 @@ export const vueListBar = [
       { text: "侦听器", link: "/src/vueList/base/listener" },
       { text: "模板引用", link: "/src/vueList/base/ref-template" },
       { text: "组件基础", link: "/src/vueList/base/component-base" },
+      { text: "CJS和ES", link: "/src/vueList/base/cjs-es" },
     ],
   },
   {
@@ -43,6 +44,9 @@ export const vueListBar = [
       { text: "日期转换", link: "/src/vueList/rare/date-switch" },
       { text: "防抖节流", link: "/src/vueList/rare/debounce-throttle" },
       { text: "拓展指令", link: "/src/vueList/rare/instructions" },
+      { text: "文件引入", link: "/src/vueList/rare/import-file" },
+      { text: "选择器", link: "/src/vueList/rare/css-select" },
+
     ],
   },
 ]
