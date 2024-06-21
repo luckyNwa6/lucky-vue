@@ -8,6 +8,107 @@ arr-------- >当前数组（可选）
 
 
 
+## 常规
+
+下面都是----数组名.下面方法  **下面几个都改变原数组** 
+
++ push（） 末尾添加数据       return数组的长度
+
++ pop（） 末尾出删除数据     return删除的那个数据
+
++ unshift（） 头部添加数据   return数组的长度
+
++ shift（） 头部删除数据        return删除的那个数据
+
++ reverse（）翻转数组          return翻转好的数组
+
++ sort（） 排序 
+
+  ```js
+  var myArray=[1,0,44,3]
+  myArray.sort()// 没变化，正序
+  myArray.sort((a,b)=>{return a-b})//从小到大
+  myArray.sort((a,b)=>{return b-a})//从大到小
+  console.log(myArray);
+  
+  ```
+
++ splice（）截取数组
+
+  ```js
+  var arr=[1,0,44,3]
+  var res=arr.splice(1,2)//参数1表示开始索引,参数2表示截取2个
+  console.log(res);//截取[ 0, 44 ] 
+  console.log(arr);//结果[ 1, 3 ]
+  
+  var arr2=[1,2,3,4,5,6]
+  arr2.splice(0, arr2.length, ...arr)//参数1表示开始索引,参数2表示多少个，后续可以无数个要插入的数据，这里用解构上面数组插入
+  console.log(arr2);//[ 1, 3 ]
+  ```
+
++ concat（） 合并数组    return一个新的数组   **下面几个都不改变原数组** 
+
+  ```js
+  var arr=[1,0,44,3]
+  var res=arr.concat(1,2)//参数1表示开始索引,参数2表示截取2个
+  console.log(res);
+  console.log(arr);//[1,0,44,3]
+  ```
+
++ join（） 数组转字符串  不改变原
+
+  ```js
+  var arr=[1,0,44,3]
+  var res=arr.join('-')//参数1表示开始索引,参数2表示截取2个
+  console.log(res);//'1-0-44-3'
+  ```
+
++ slice（）截取数组的一部分数据  和上面有个很像少了个p
+
+  ```js
+  var arr=[1,0,44,3]
+  var res=arr.slice(1,2)//索引 左闭合右开
+  console.log(res);//[0]
+  ```
+
++ indexOf**(**要查询的数据)  从左检查数组中有没有这个数值    
+
+  如果有就返回该数据**第一次**出现的索引   没有返回 -1  
+
+  还可以**数组名.indexOf(**要查询的数据,开始索引)
+
++ lastIndexOf   从右边开始类似上面
+
+## for..in
+
+for in中index索引为字符串型数字，会遍历数组[所有的可枚举属性]，一般遍历对象用的
+
+遍历的是数组的索引
+
+```js
+var myArray=[1,2]
+myArray.name="name数组"
+for (var index in myArray) {
+    console.log("字符串型数字:", index) //'0' '1' '2'
+    console.log(myArray[index]);//结果 1，2，"name数组"
+}
+```
+
+## for..of
+
+遍历的是数组元素值
+
+```js
+let arr=[ 
+  {name:'张三',age:23},
+  {name:'张三',age:25}
+]
+
+for(let cont of arr){
+  console.log(cont);  // {name:'张三',age:23},{name:'张三',age:25}
+}
+```
+
 ## forEach
 
 不返回新数组，返回undefined
