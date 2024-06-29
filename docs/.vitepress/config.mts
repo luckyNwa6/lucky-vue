@@ -4,7 +4,7 @@ import topNav from "../src/js/topNav.js"; // 头部导航
 
 import { vueListBar } from "../src/js/Bars/vueListBar"; //VueList的侧边菜单
 import { chartListBar } from "../src/js/Bars/chartListBar"; //VueList的侧边菜单
-
+import { elListBar } from "../src/js/Bars/elListBar";
 export default {
   title: "lucky_vue",
   description: "渐进式JavaScript 框架",
@@ -32,6 +32,7 @@ export default {
     sidebar: {
       "/src/vueList": vueListBar,
       "/src/chartList": chartListBar,
+      "/src/elList": elListBar,
     },
 
     socialLinks: [{ icon: "github", link: "https://github.com/luckyNwa6" }],

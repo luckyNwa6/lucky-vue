@@ -4,7 +4,8 @@ export default [
     text: "技术文档",
     items: [
       { text: "Vue", link: "/src/vueList/start/start-explain" },
-      { text: "图表", link: "/src/chartList/page1" },
+      { text: "Echarts", link: "/src/chartList/page1" },
+      { text: "Element", link: "/src/elList/page1" },
     ],
   },
   {
