@@ -56,3 +56,16 @@ this.$route.query.id    拿值
 
 参数显示在地址栏中，刷新页面参数不丢失
 ```
+项目中遇到删除不需要的url后面的参数
+
+```js
+    if (this.$route.query.deviceId) {
+      console.log("🚀 ~ created ~ this.$route.query:", this.$route.query);
+      // 如果路由中携带了 deviceId 参数，则删除它
+      let query = { ...this.$route.query };
+      delete query.deviceId;
+      this.$router.replace({ query });
+      console.log("🚀 ~ created ~ this.$route.query:", this.$route.query);
+    }
+
+```

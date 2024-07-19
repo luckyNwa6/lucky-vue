@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
+    "use":"nvm use 18",
     "i": "yarn",
     "docs:dev": "vitepress dev docs  --open",
     "docs:build": "vitepress build docs",
