@@ -79,6 +79,17 @@ arr-------- >当前数组（可选）
 
 + lastIndexOf   从右边开始类似上面
 
+```js
+dmeo1(字符串中含-)
+      if(s.indexof('-')>0){
+   		let parts= s.split('-')   切割成数组
+   		parts[parts.length-1] //获取最后一个的值
+	 }
+
+```
+
+
+
 ## for..in
 
 for in中index索引为字符串型数字，会遍历数组[所有的可枚举属性]，一般遍历对象用的

@@ -75,6 +75,12 @@ let y = 20;
 解构赋值是一种从数组或对象中提取数据并赋值给变量的简洁写法。它可以减少代码量，提高可读性，并且支持默认值、嵌套结构、别名等特性。
 
 ```js
+    let { type: typeName = '', id = '' } = this.$route.query //es6语法   typeName是别名
+    console.log('🚀 ~ mounted ~ id:', id)
+    console.log('🚀 ~ activated ~ typeName:', typeName)
+    let { isPass: formCheckRes = false } = this.$refs.serveInfo.validateFn()  //为空赋默认值
+    console.log('🚀 ~ checkForm ~ formCheckRes:', formCheckRes)
+
 // 数组解构：按照数组元素位置对应赋值给变量
 let [f, g, h] = [1, 2, 3];
 console.log(f); // 1

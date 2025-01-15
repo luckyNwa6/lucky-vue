@@ -30,7 +30,7 @@ modules
 
 +  模块化 VueX，可以让每一个模块拥有自己的 state、mutation、action、 getters，使得结构非常清晰，方便管理
 
-## Demo
+## Demo1
 
 ```js
 (1)index.js文件夹配置如下
@@ -86,16 +86,44 @@ export default {
 import { mapActions } from "vuex"; //通过这个设置值
 import { mapGetters } from "vuex"; //通过这个获取值
   computed: {    //计算属性
-    ...mapGetters(["getUser"])
+    ...mapGetters(["getUser","token"])
   },
-  watch: {   //监听vuex里的值变化
-    // 获取vuex的登录状态
-    getUser: function(val) {
-      if (val === "") {          // 用户没有登录
-      } else {}}},
   methods: {
-  需要给user赋值时候直接this.setUser(值),拿调用this.getUser()
-    ...mapActions(["setUser"]),
+ 	//需要给user赋值时候直接this.setUser(值),拿调用this.getUser()
+    ...mapActions(["setUser","setToken"]),
     }
+```
+
+## Demo2
+
+```js
+//比如在登录时候调用这个vuex里的方法
+this.$store.dispatch(Action中的方法如LoginLucky,userInfo).then(res=>{
+    //处理resolve()返回结果
+}).catch(()=>{
+    //处理reject()
+})
+state:{
+    sysId:getStore({name:'sysId'}) || ''
+},
+mutation:{
+    SET_SYSID:(state,sysId)=>{
+        state.sysId=sysId 
+        setStore({name:'sysId',content:state.sysId})  //存缓存中 去找个localStorage工具类|sessionStorage工具类用
+    }
+},
+
+action:{
+	LoginLucky({commit,dispatch},userInfo={}){
+        return new Promise((resolve,reject)=>{
+            //这里面的异步请求
+            //比如获取到系统id
+            commit('SET_SYSID',sysId) //触发mutation方法
+            //最外层的一个异步处理完resolve()
+            //最外层一个异步的catch里reject()
+        })
+    }
+}
+
 ```
 
