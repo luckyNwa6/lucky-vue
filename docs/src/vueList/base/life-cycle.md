@@ -2,7 +2,7 @@
 
 生命周期钩子，也都是方法，下面是实例生命周期的图表
 
-![图片1](https://imgs.luckynwa.top/mdS/lifecycle.png)
+![图片1](https://imgs.luckynwa.top/profile/mdS/lifecycle.png)
 
 ## beforeCreate
 

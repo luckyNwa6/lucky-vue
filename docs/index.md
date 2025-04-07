@@ -6,7 +6,7 @@ hero:
   text: "JavaScript 框架"
   tagline: 易学易用，适用场景丰富的🤠小维💘前端知识库
   image:
-    src: "https://imgs.luckynwa.top/mdS/logoVitePress.png"
+    src: "https://imgs.luckynwa.top/profile/mdS/logoVitePress.png"
   actions:
     - theme: brand
       text: 快速上手

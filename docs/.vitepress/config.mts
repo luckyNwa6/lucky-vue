@@ -15,12 +15,12 @@ export default {
       "link",
       {
         rel: "icon",
-        href: "https://imgs.luckynwa.top/mdS/logoVitePress.png",
+        href: "https://imgs.luckynwa.top/profile/mdS/logoVitePress.png",
       },
     ],
   ],
   themeConfig: {
-    logo: "https://imgs.luckynwa.top/mdS/logoVitePress.png",
+    logo: "https://imgs.luckynwa.top/profile/mdS/logoVitePress.png",
     outline: {
       label: "导航",
     },

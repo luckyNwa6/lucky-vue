@@ -84,7 +84,7 @@ const resetFileInput = () => {
 
 新上传页面-->文件有它的格式要求-->用了部分的elementplus的上传组件（正常它的上传按钮都是在这个组件插槽里的，我这自定义按钮放外面所以都用不了该组件的方法如提交）-->验证zip里的格式-->进度条3种状态
 
-![](https://imgs.luckynwa.top/mdS/image-20240629083303813.png)
+![](https://imgs.luckynwa.top/profile/mdS/image-20240629083303813.png)
 
 采用组合式写法
 
@@ -944,4 +944,4 @@ const handleBeforeUpload = file => {
 
 ```
 
-![](https://imgs.luckynwa.top/mdS/image-20240629083303814.png)
+![](https://imgs.luckynwa.top/profile/mdS/image-20240629083303814.png)
