@@ -2,6 +2,7 @@
   "name": "lucky_vue",
   "version": "1.0.0",
   "description": "",
+  "license": "UNLICENSED",
   "scripts": {
     "use":"nvm use 18",
     "i": "yarn",
