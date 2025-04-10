@@ -40,7 +40,7 @@ jobs:
           password: ${{ secrets.SSH_PASSWORD }}
           port: ${{ secrets.SSH_PORT }}
           script: |
-            rm -rf /nwa/nginx91/html/myvue/*
+            rm -rf /nwa/nginx/html/myvue/*
 
       # 部署到服务器
       - name: 上传打包后的资源到服务器
@@ -51,5 +51,5 @@ jobs:
           password: ${{ secrets.SSH_PASSWORD }}
           port: ${{ secrets.SSH_PORT }}
           source: "./dist/*"
-          target: "/nwa/nginx91/html/myvue"
+          target: "/nwa/nginx/html/myvue"
           strip_components: 1
