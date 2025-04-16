@@ -5,7 +5,7 @@ export default [
     items: [
       { text: "Vue", link: "/src/vueList/start/start-explain" },
       { text: "Echarts", link: "/src/chartList/page1" },
-      { text: "Element-ui", link: "/src/elList/page1" },
+      { text: "Element-ui", link: "/src/elList/introduction" },
       { text: "Frontend-notes", link: "/src/frontendList/start/start-explain" },
     ],
   },

@@ -3,8 +3,8 @@ layout: home
 
 hero:
   name: 小维
-  text: 🤠 前端知识宝库 💘
-  tagline: 好记性不如烂笔头 🚀 前端知识打怪笔记 📝✨
+  text: 前端知识库
+  tagline: 🤠好记性不如烂笔头 🚀 前端知识打怪笔记 📝✨
   image:
     src: "https://imgs.luckynwa.top/profile/mdS/logoVitePress.png"
   actions:
