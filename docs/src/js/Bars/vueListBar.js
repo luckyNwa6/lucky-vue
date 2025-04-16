@@ -33,21 +33,10 @@ export const vueListBar = [
       { text: "路由", link: "/src/vueList/deep-component/router-use" },
       { text: "缓存", link: "/src/vueList/deep-component/localStorage" },
       { text: "VueX", link: "/src/vueList/deep-component/vueX-use" },
-      { text: "Flex", link: "/src/vueList/deep-component/flex" },
-      { text: "CSS", link: "/src/vueList/deep-component/css" },
     ],
   },
   {
     text: "拓展内容",
-    items: [
-      { text: "ES6特性", link: "/src/vueList/rare/es6-study" },
-      { text: "数组处理", link: "/src/vueList/rare/arr-handle" },
-      { text: "对象处理", link: "/src/vueList/rare/obj-handle" },
-      { text: "日期转换", link: "/src/vueList/rare/date-switch" },
-      { text: "防抖节流", link: "/src/vueList/rare/debounce-throttle" },
-      { text: "拓展指令", link: "/src/vueList/rare/instructions" },
-      { text: "文件引入", link: "/src/vueList/rare/import-file" },
-      { text: "选择器", link: "/src/vueList/rare/css-select" },
-    ],
+    items: [{ text: "拓展指令", link: "/src/vueList/rare/instructions" }],
   },
 ];

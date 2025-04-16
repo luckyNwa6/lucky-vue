@@ -7,14 +7,14 @@ export const siteData = [
   },
   {
     name: "Lucky_Tools",
-    desc: "🫣基于开源工具站，二次开发、无广告、新增一些自己常用功能的工具网站 Web 前端框架",
+    desc: "😋基于开源工具站，二次开发、无广告、新增一些自己常用功能的工具网站 Web 前端框架",
     link: "https://mytool.luckynwa.top/lucky-tools/",
     className: "color-green-gradient2",
   },
   {
-    name: "Lucky_UI",
-    desc: "😋基于VuePress搭建的个人UI组件库，并上传到Npm官网，分享一些有趣的组件",
-    link: " https://myui.luckynwa.top/",
+    name: "Lucky_Admin",
+    desc: "😋基于若依前后端分离框架搭建的个人后台管理系统",
+    link: " https://admin.luckynwa.top/",
     className: "color-red",
   },
   {
@@ -47,5 +47,4 @@ export const siteData = [
     link: "https://ant-design.antgroup.com/index-cn",
     className: "color-blue-light6",
   },
-
 ];

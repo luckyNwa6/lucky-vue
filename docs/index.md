@@ -2,9 +2,9 @@
 layout: home
 
 hero:
-  name: 渐进式
-  text: "JavaScript 框架"
-  tagline: 易学易用，适用场景丰富的🤠小维💘前端知识库
+  name: 小维
+  text: 🤠 前端知识宝库 💘
+  tagline: 好记性不如烂笔头 🚀 前端知识打怪笔记 📝✨
   image:
     src: "https://imgs.luckynwa.top/profile/mdS/logoVitePress.png"
   actions:
@@ -17,16 +17,16 @@ hero:
 
 features:
   - title: Lucky_Blog
-    details: 😍基于Hexo框架搭建的个人博客网站，分享一些自己的笔记心得
+    details: 😋基于Hexo框架搭建的个人博客网站，分享一些自己的笔记心得
     link: https://luckynwa.top/about/
     linkText: 了解更多
   - title: Lucky_Tools
-    details: 🫣基于开源工具站，二次开发、无广告、新增一些自己常用功能的工具网站
+    details: 😋基于开源工具站，二次开发、无广告、新增一些自己常用功能的工具网站
     link: https://mytool.luckynwa.top/lucky-tools/
     linkText: 了解更多
-  - title: Lucky_UI
-    details: 😋基于VuePress搭建的个人UI组件库，并上传到Npm官网，分享一些有趣的组件
-    link: https://myui.luckynwa.top/
+  - title: Lucky_Admin
+    details: 😋基于若依前后端分离框架搭建的个人后台管理系统
+    link: https://admin.luckynwa.top
     linkText: 了解更多
   - title: Vue
     details: Vue.js官网中文文档，现在是组合式的时代
