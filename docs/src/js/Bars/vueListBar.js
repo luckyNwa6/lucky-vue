@@ -33,6 +33,8 @@ export const vueListBar = [
       { text: "路由", link: "/src/vueList/deep-component/router-use" },
       { text: "缓存", link: "/src/vueList/deep-component/localStorage" },
       { text: "VueX", link: "/src/vueList/deep-component/vueX-use" },
+      { text: "Flex", link: "/src/vueList/deep-component/flex" },
+      { text: "CSS", link: "/src/vueList/deep-component/css" },
     ],
   },
   {
@@ -46,7 +48,6 @@ export const vueListBar = [
       { text: "拓展指令", link: "/src/vueList/rare/instructions" },
       { text: "文件引入", link: "/src/vueList/rare/import-file" },
       { text: "选择器", link: "/src/vueList/rare/css-select" },
-
     ],
   },
-]
+];
