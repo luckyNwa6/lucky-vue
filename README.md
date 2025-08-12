@@ -53,3 +53,7 @@ npm install -g rimraf
 本项目仓库:https://github.com/luckyNwa6/lucky-vue-study
 
 官网: https://vitepress.dev/reference/default-theme-home-page
+
+
+## 🚀 更新
+2025-8-12  使用pnpm来管理包

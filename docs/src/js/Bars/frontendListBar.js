@@ -7,6 +7,7 @@ export const frontendListBar = [
   {
     text: "常用",
     items: [
+      { text: "pnpm使用", link: "/src/frontendList/common/pnpm" },
       { text: "ES6特性", link: "/src/frontendList/common/es6-study" },
       { text: "数组处理", link: "/src/frontendList/common/arr-handle" },
       { text: "对象处理", link: "/src/frontendList/common/obj-handle" },

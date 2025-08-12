@@ -5,7 +5,7 @@
   "license": "UNLICENSED",
   "scripts": {
     "use":"nvm use 18",
-    "i": "yarn",
+    "i": "pnpm i",
     "docs:dev": "vitepress dev docs  --open",
     "docs:build": "vitepress build docs",
     "server": "vitepress dev docs  --open",

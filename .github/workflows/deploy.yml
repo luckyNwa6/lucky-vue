@@ -33,13 +33,13 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: yarn # 或者 pnpm / yarn
+          cache: pnpm # 或者 pnpm / yarn
       - name: 设置Pages
         uses: actions/configure-pages@v4
       - name: 安装依赖
-        run: yarn install # 或者 pnpm install / yarn install / bun install
+        run: pnpm install # 或者 pnpm install / yarn install / bun install
       - name: 使用VitePress构建
-        run: yarn  docs:build # 或者 pnpm docs:build / yarn docs:build / bun run docs:build
+        run: pnpm  docs:build # 或者 pnpm docs:build / yarn docs:build / bun run docs:build
       - name: 上传工件
         uses: actions/upload-pages-artifact@v3
         with:
