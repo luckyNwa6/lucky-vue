@@ -10,6 +10,8 @@ node 18+
 
 包管理采用 yarn
 
+npm i -g pnpm@8
+
 ## 🐯 代码提交规范
 
 husky 是一个 Git Hook 工具，可以让你在 Git 提交过程中自动运行脚本。

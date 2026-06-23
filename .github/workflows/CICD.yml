@@ -22,7 +22,7 @@ jobs:
           node-version: 20
 
       - name: 安装pnpm
-        run: npm install -g pnpm
+        run: npm install -g pnpm@8
 
       - name: 设置Pages
         uses: actions/configure-pages@v4

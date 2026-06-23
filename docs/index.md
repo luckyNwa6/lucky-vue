@@ -18,11 +18,11 @@ hero:
 features:
   - title: Lucky_Blog
     details: 😋基于Hexo框架搭建的个人博客网站，分享一些自己的笔记心得
-    link: https://luckynwa.top/about/
+    link: https://blog.luckynwa.top
     linkText: 了解更多
   - title: Lucky_Tools
     details: 😋基于开源工具站，二次开发、无广告、新增一些自己常用功能的工具网站
-    link: https://mytool.luckynwa.top/lucky-tools/
+    link: https://tool.luckynwa.top/lucky-tools/
     linkText: 了解更多
   - title: Lucky_Admin
     details: 😋基于若依前后端分离框架搭建的个人后台管理系统
