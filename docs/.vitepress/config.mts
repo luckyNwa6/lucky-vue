@@ -7,7 +7,7 @@ import { chartListBar } from "../src/js/Bars/chartListBar"; //VueList的侧边�
 import { elListBar } from "../src/js/Bars/elListBar";
 import { frontendListBar } from "../src/js/Bars/frontendListBar";
 export default {
-  title: "小维前端知识库",
+  title: "小维 · Vue文档",
   description: "渐进式JavaScript 框架",
   base: "/lucky-vue/",
   outDir: "../dist", // 设置输出目录
@@ -16,7 +16,7 @@ export default {
       "link",
       {
         rel: "icon",
-        href: "https://imgs.luckynwa.top/profile/mdS/logoVitePress.png",
+        href: "/lucky-vue/favicon.ico",
       },
     ],
   ],

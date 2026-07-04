@@ -2,9 +2,9 @@
 layout: home
 
 hero:
-  name: 小维
-  text: 前端知识库
-  tagline: 🤠好记性不如烂笔头 🚀 前端知识打怪笔记 📝✨
+  name: 渐进式
+  text: JavaScript 框架
+  tagline: 🤠好记性不如烂笔头 🚀 小维的VUE开发文档 📝✨
   image:
     src: "https://imgs.luckynwa.top/profile/mdS/logoVitePress.png"
   actions:
